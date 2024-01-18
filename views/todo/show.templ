@@ -1,5 +1,17 @@
 package welcome
 
+import "example/todoapp/views/layout"
+
 templ Show(message string){
-    <h1>Hello, and welcome to {Name}</h1>
+    @layout.Base(){
+    <h1>{message}</h1>
+    }
+}
+
+templ Header(){
+    <h1>This is a header</h1>
+}
+
+templ Button(text string) {
+	<button class="button">{ text }</button>
 }

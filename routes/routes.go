@@ -10,6 +10,8 @@ func InitializeServer() {
 	// Initialize the Gin router
 	router := gin.Default()
 
+	router.HTMLRender = &TemplRender{}
+
 	// Your Gin routes and handlers go here
 	Routes(router)
 
